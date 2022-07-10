@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "914572778466",
+    "project_id": "team38-dcb5d",
+    "storage_bucket": "team38-dcb5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914572778466:android:f780f61785a8ccbdc1b7bb",
+        "android_client_info": {
+          "package_name": "edu.neu.team38"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914572778466-4vi8ih4ih95hfhg3ubc0n3dk4hsi47tp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8RGTtOqIdevmJSvzb4cQC1qOGjucG8vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914572778466-4vi8ih4ih95hfhg3ubc0n3dk4hsi47tp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
