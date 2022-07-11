@@ -6,12 +6,12 @@ import edu.neu.team38.utils.Utils;
 public class Message {
     private String content;
     private String date;
-    private User sentByUser;
-    private User receivedByUser;
+    private String sentByUser;
+    private String receivedByUser;
 
     public Message(){}
 
-    public Message(String content, User sentByUser, User receivedByUser) {
+    public Message(String content, String sentByUser, String receivedByUser) {
         this.content = content;
         this.date = Utils.date();
         this.sentByUser = sentByUser;
@@ -22,15 +22,25 @@ public class Message {
         return content;
     }
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "content='" + content + '\'' +
+                ", date='" + date + '\'' +
+                ", sentByUser='" + sentByUser + '\'' +
+                ", receivedByUser='" + receivedByUser + '\'' +
+                '}';
+    }
+
     public String getDate() {
         return date;
     }
 
-    public User getSentByUser() {
+    public String getSentByUser() {
         return sentByUser;
     }
 
-    public User getReceivedByUser() {
+    public String getReceivedByUser() {
         return receivedByUser;
     }
 }
