@@ -4,7 +4,6 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -13,17 +12,15 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import edu.neu.team38.realtimeDB.models.Message;
 import edu.neu.team38.realtimeDB.models.User;
 
 public class RealtimeDAO {
-    private DatabaseReference databaseReference;
+    private final DatabaseReference databaseReference;
     private static final String TAG = RealtimeDAO.class.getSimpleName();
-    private ValueEventListener valueEventListener;
-    private ArrayList<User> userList;
+    private final ValueEventListener valueEventListener;
+    private final ArrayList<User> userList;
 
     public RealtimeDAO() {
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -65,17 +62,17 @@ public class RealtimeDAO {
         return userList.get(0);
     }
 
-    public Task<Void> addUser(User user) {
+    public void addUser(User user) {
         if (user == null) {
             Log.e(TAG, "no user input");
         }
-        return databaseReference.child("users").push().setValue(user);
+        databaseReference.child("users").push().setValue(user);
     }
 
-    public Task<Void> addMessage(Message message) {
+    public void addMessage(Message message) {
         if (message == null) {
             Log.e(TAG, "no message input");
         }
-        return databaseReference.child("messages").push().setValue(message);
+        databaseReference.child("messages").push().setValue(message);
     }
 }

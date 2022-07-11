@@ -1,5 +1,7 @@
 package edu.neu.team38.realtimeDB.models;
 
+import androidx.annotation.NonNull;
+
 public class User {
 
     private String username;
@@ -13,6 +15,7 @@ public class User {
         return username;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "User{" +
