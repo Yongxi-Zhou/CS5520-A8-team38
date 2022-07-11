@@ -5,6 +5,9 @@
       <map>
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3522298177083334" />
+        <entry key="app/src/main/res/layout/activity_received_page.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/activity_send_page.xml" value="0.14617462158203126" />
+        <entry key="app/src/main/res/layout/recycleview.xml" value="0.24153821026837388" />
       </map>
     </option>
   </component>
