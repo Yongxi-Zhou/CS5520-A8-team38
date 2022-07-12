@@ -1,6 +1,8 @@
 package edu.neu.team38.realtimeDB.models;
 
 
+import androidx.annotation.NonNull;
+
 import edu.neu.team38.utils.Utils;
 
 public class Message {
@@ -22,6 +24,7 @@ public class Message {
         return content;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Message{" +

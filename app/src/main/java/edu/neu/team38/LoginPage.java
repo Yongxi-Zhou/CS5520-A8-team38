@@ -3,6 +3,7 @@ package edu.neu.team38;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +36,7 @@ public class LoginPage extends AppCompatActivity {
     List<User> userList;
     String curUser;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,16 +83,13 @@ public class LoginPage extends AppCompatActivity {
                 String toUsername = toUser.getText().toString();
                 String content = messageContent.getText().toString();
                 String fromUsername;
-                User toUserObj, fromUserObj;
                 Message message;
 
                 Log.i("toUsername", toUsername);
-                // 1. check the user is already exist if the user received the message exists
+                    // 1. check the user is already exist if the user received the message exists
                 if (dao.checkIfUserExist(toUsername)) {
                     // 2. create Message and add it to the Firebase
                     fromUsername = intent.getStringExtra("username");
-//                    toUserObj = dao.getUser(toUsername);
-//                    fromUserObj = dao.getUser(fromUsername);
                     message = new Message(content, fromUsername, toUsername);
 
                     dao.addMessage(message);
@@ -119,7 +118,6 @@ public class LoginPage extends AppCompatActivity {
 
         @Override
         public void onCancelled(@NonNull DatabaseError error) {
-//123
         }
     };
 }
